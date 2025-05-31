@@ -1,47 +1,76 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: 255 255 255;
-  --color-box: 255 255 255;
-  --box-border: 229 231 235;
-  --box-sd: 226 232 240 / 0.5;
-  --heading-1: 23 37 84;
-  --heading-2: 31 41 55;
-  --heading-3: 55 65 81;
+    /* Light Mode */
+    --color-bg: 255 255 255;
+    --color-box: 255 255 255;
+    --box-border: 229 231 235;
+    --box-sd: 226 232 240 / 0.5;
+    --heading-1: 23 37 84;
+    --heading-2: 31 41 55;
+    --heading-3: 55 65 81;
+
+    /* Add primary to Tailwind's color palette */
+    --color-primary: 141 72% 58%; /* HSL values separated for Tailwind */
 }
 
 .dark {
-  --color-bg: 3 7 18;
-  --color-box: 17 24 39;
-  --box-border: 243 244 246 / 0.1;
-  --box-sd: transparent;
-  --heading-1: 255 255 255;
-  --heading-2: 243 244 246;
-  --heading-3: 209 213 219;
+    /* Dark Mode */
+    --color-bg: 3 7 18;
+    --color-box: 17 24 39;
+    --box-border: 243 244 246 / 0.1;
+    --box-sd: transparent;
+    --heading-1: 255 255 255;
+    --heading-2: 243 244 246;
+    --heading-3: 209 213 219;
 }
 
+/* Extend Tailwind's colors with your primary */
 @layer utilities {
-  .bg-body {
-    background-color: rgb(var(--color-bg));
-  }
-  .bg-box-bg {
-    background-color: rgb(var(--color-box));
-  }
-  .text-heading-1 {
-    color: rgb(var(--heading-1));
-  }
-  .text-heading-2 {
-    color: rgb(var(--heading-2));
-  }
-  .text-heading-3 {
-    color: rgb(var(--heading-3));
-  }
+    .bg-primary {
+        background-color: hsl(var(--color-primary));
+    }
+    .text-primary {
+        color: hsl(var(--color-primary));
+    }
+    .border-primary {
+        border-color: hsl(var(--color-primary));
+    }
+    .bg-body {
+        background-color: rgb(var(--color-bg));
+    }
+    .bg-box-bg {
+        background-color: rgb(var(--color-box));
+    }
+    .text-heading-1 {
+        color: rgb(var(--heading-1));
+    }
+    .text-heading-2 {
+        color: rgb(var(--heading-2));
+    }
+    .text-heading-3 {
+        color: rgb(var(--heading-3));
+    }
 }
 
+/* Extend Tailwind's theme to include primary color */
+@layer base {
+    :root {
+        --tw-color-primary: var(--color-primary);
+    }
+}
+
+/* Now you can use primary in Tailwind utilities */
+@layer components {
+    .btn-primary {
+        @apply bg-primary text-white hover:bg-opacity-90;
+    }
+}
+
+/* Base Styles */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-
 body {
-  font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }

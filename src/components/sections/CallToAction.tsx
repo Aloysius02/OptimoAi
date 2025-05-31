@@ -1,6 +1,12 @@
-import { Button } from "../shared/Button";
-import { Container } from "../shared/Container";
-import { Paragraph } from "../shared/Paragraph";
+import {
+  Button
+} from "../shared/Button";
+import {
+  Container
+} from "../shared/Container";
+import {
+  Paragraph
+} from "../shared/Paragraph";
 
 export const CTA = () => {
   return (
@@ -12,7 +18,7 @@ export const CTA = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-heading-1">
               {" "}
               Quick Start you{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
+              <span className="text-primary">
                 own AI
               </span>{" "}
               Business
