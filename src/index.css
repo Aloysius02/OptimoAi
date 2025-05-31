@@ -10,8 +10,8 @@
     --heading-2: 31 41 55;
     --heading-3: 55 65 81;
 
-    /* Add primary to Tailwind's color palette */
-    --color-primary: 141 72% 58%; /* HSL values separated for Tailwind */
+    /* Add primary to Tailwind's color palette --color-primary: 141 72% 58%;  HSL values separated for Tailwind */
+    --color-primary: 141 72% 50%; /* HSL values separated for Tailwind */
 }
 
 .dark {
