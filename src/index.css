@@ -60,13 +60,6 @@
     }
 }
 
-/* Now you can use primary in Tailwind utilities */
-@layer components {
-    .btn-primary {
-        @apply bg-primary text-white hover:bg-opacity-90;
-    }
-}
-
 /* Base Styles */
 html {
     scroll-behavior: smooth;
