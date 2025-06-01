@@ -76,7 +76,7 @@ export const Hero = () => {
 
       <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-non lg:mx-0 mx-auto max-w-3xl">
         <img
-        src="https://images.pexels.com/photos/7773731/pexels-photo-7773731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        src="/cyberpunk-hero.png"
         alt="Hero image"
         width={2350}
         height={2359}
@@ -88,3 +88,6 @@ export const Hero = () => {
 </section>
 );
 };
+
+
+//https://images.pexels.com/photos/7773731/pexels-photo-7773731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
